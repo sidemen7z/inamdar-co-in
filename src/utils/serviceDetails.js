@@ -349,7 +349,7 @@ export const serviceDetails = {
     },
 
     'Udyam Registration': {
-        description: `Udyam Registration (formerly MSME/SSI Registration) is a government registration for micro, small, and medium enterprises. It's completely free and provides numerous benefits including easier access to credit, subsidies, and government schemes. The registration is based on self-declaration with no requirement of documents or proof.`,
+        description: `Udyam Registration (formerly MSME/SSI Registration) is a government registration for micro, small, and medium enterprises. It provides numerous benefits including easier access to credit, subsidies, and government schemes. The registration is based on self-declaration with no requirement of documents or proof.`,
         benefits: [
             'Easier access to bank loans at lower interest rates',
             'Collateral-free credit facilities',
@@ -399,7 +399,7 @@ export const serviceDetails = {
             'Access to Fund of Funds (₹10,000 Cr corpus)',
             'Easy exit (90-day wind-up process)',
             'No angel tax on funding',
-            'Free hosting on Startup India portal',
+            'Hosting on Startup India portal',
             'Networking and mentorship opportunities'
         ],
         documents: [
@@ -529,7 +529,7 @@ export const serviceDetails = {
             'Listed in government NGO database',
             'Increased credibility and visibility',
             'Easy verification by donors',
-            'Free registration process',
+            'Registration process',
             'Required for government collaborations',
             'Transparent rating system'
         ],
@@ -559,8 +559,8 @@ export const serviceDetails = {
                 answer: 'All NGOs, societies, and trusts seeking government grants, CSR funding, or collaborations with NITI Aayog and other government bodies need DARPAN registration.'
             },
             {
-                question: 'Is DARPAN registration free?',
-                answer: 'Yes, DARPAN registration is completely free. There are no charges for registration or renewal.'
+                question: 'Are there any charges for DARPAN registration?',
+                answer: 'No, DARPAN registration has no charges for registration or renewal.'
             }
         ]
     },
@@ -1223,5 +1223,5 @@ export const serviceImages = {
     'TDS Return Filing': '/img/tds-return-filing-india.png',
     'Professional Tax Registration': '/img/Professional_Tax.png',
     'Trademark Registration': '/img/Trademark.webp',
-    'ISO 9001-2015': '/img/default.png',
+    'ISO 9001-2015': '/img/iso.png',
 };

@@ -173,7 +173,7 @@ const ServicePage = ({ service }) => {
             {/* CTA Section */}
             <div className={styles.ctaSection}>
               <h2>Ready to Get Started?</h2>
-              <p>Our expert team is here to assist you with {service}. Contact us now for a free consultation!</p>
+              <p>Our expert team is here to assist you with {service}. Contact us now for a consultation!</p>
               <div className={styles.ctaButtons}>
                 <a href="tel:+919552319748" className={styles.ctaButton}>
                   <i className="fas fa-phone"></i>

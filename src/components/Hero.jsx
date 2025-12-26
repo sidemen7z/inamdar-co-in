@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import styles from './Hero.module.css';
 
 const Hero = () => {
@@ -46,7 +45,7 @@ const Hero = () => {
           <div
             key={index}
             className={`${styles.heroSlide} ${index === currentSlide ? styles.active : ''}`}
-            style={{ 
+            style={{
               backgroundImage: `url(${slide.image})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
@@ -60,9 +59,19 @@ const Hero = () => {
                   <h1 className={styles.heroTitle}>{slide.title}</h1>
                   <p className={styles.heroSubtitle}>{slide.subtitle}</p>
                   <div className={styles.heroCta}>
-                    <Link to="/#services" className={`${styles.btn} ${styles.btnPrimary}`}>
+                    <a
+                      href="#services"
+                      className={`${styles.btn} ${styles.btnPrimary}`}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        const servicesSection = document.getElementById('services');
+                        if (servicesSection) {
+                          servicesSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                      }}
+                    >
                       Explore Services
-                    </Link>
+                    </a>
                     <a href="tel:+919552319748" className={`${styles.btn} ${styles.btnOutline}`}>
                       <i className="fas fa-phone"></i>
                       Contact Us

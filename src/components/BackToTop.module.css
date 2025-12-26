@@ -1,0 +1,109 @@
+.backToTop {
+  position: fixed;
+  bottom: 35px;
+  right: 35px;
+  width: 56px;
+  height: 56px;
+  background: var(--gradient-accent);
+  color: var(--white);
+  border: none;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition-bounce);
+  z-index: 999;
+  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.backToTop::before {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  background: var(--gradient-accent);
+  border-radius: 16px;
+  opacity: 0;
+  filter: blur(15px);
+  transition: var(--transition);
+  z-index: -1;
+}
+
+.backToTop.visible {
+  opacity: 1;
+  visibility: visible;
+  animation: slideInRight 0.5s ease-out;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.backToTop:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 12px 35px rgba(37, 99, 235, 0.6);
+}
+
+.backToTop:hover::before {
+  opacity: 0.8;
+}
+
+.backToTop:active {
+  transform: translateY(-4px) scale(0.98);
+}
+
+.backToTop i {
+  font-size: 20px;
+  transition: var(--transition-bounce);
+}
+
+.backToTop:hover i {
+  transform: translateY(-3px);
+  animation: bounce 0.6s ease-in-out infinite;
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(-3px);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@media (max-width: 768px) {
+  .backToTop {
+    bottom: 25px;
+    right: 25px;
+    width: 50px;
+    height: 50px;
+    border-radius: 14px;
+  }
+
+  .backToTop i {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 576px) {
+  .backToTop {
+    bottom: 20px;
+    right: 20px;
+    width: 46px;
+    height: 46px;
+  }
+}

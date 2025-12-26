@@ -1,0 +1,3 @@
+# Netlify redirects (if deploying to Netlify)
+/Admindashboard/* /Admindashboard/:splat 200
+

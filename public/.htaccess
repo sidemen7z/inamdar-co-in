@@ -1,0 +1,19 @@
+# Apache .htaccess for serving admin dashboard
+# If using Apache server
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  
+  # Don't rewrite admin dashboard files
+  RewriteCond %{REQUEST_URI} ^/Admindashboard/
+  RewriteRule ^ - [L]
+  
+  # Don't rewrite files that exist
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  
+  # Rewrite everything else to index.html for React Router
+  RewriteRule . /index.html [L]
+</IfModule>
+
